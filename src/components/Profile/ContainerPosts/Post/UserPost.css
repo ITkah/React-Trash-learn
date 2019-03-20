@@ -1,0 +1,42 @@
+.post-block {
+    background-color: #ffffff;
+    width: auto;
+}
+
+.post-state {
+    display: flex;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.post-state_avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post-state_avatar img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.post-state_message {
+    margin-left: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.post-state_message p {
+    word-wrap: break-word;
+}
+
+.post-state_like{
+    margin: auto;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+}
+
+.post-state_like span{
+    word-wrap: normal;
+    font-size: 0.87rem;
+}

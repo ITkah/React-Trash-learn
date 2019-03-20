@@ -1,0 +1,17 @@
+.profile-info-photo img{
+    height: 200px;
+    border-radius: 50%;
+}
+
+.profile-info{
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+
+.profile-info-text{
+    margin: 2rem;
+}
+
+.profile-info-text p{
+    font-size: 1.25rem;
+}

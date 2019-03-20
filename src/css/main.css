@@ -1,0 +1,35 @@
+body {
+    background-color: #F3F3F3;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style-type: none;
+}
+ul {
+    padding: 0rem;
+}
+
+main {
+    display: flex;
+    min-height: calc(100vh - 120px);
+}
+
+p {
+    margin: 0rem;
+}
+
+textarea { 
+    resize: none;
+    height: 50px;
+    width: 50%;
+}
+
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+}

@@ -1,0 +1,59 @@
+.dialogs{
+    margin: 0.5rem 1.5rem 1.5rem 0rem;
+    width: 100%;
+    display: flex;
+}
+
+.dialogs-user{
+    width: 40%;
+    padding: 1.25rem;
+    border-right: 1px solid #3578E5;  
+}
+
+.dialogs-user_block{
+    margin-left: 10%;
+}
+
+.dialogs-messages{
+    width: 60%;
+    padding: 1.25rem;
+}
+
+.dialogs-user_block h3{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.dialogs-user_block h3:before{
+    content:"\2022";
+    margin-right: 0.75rem;
+}
+
+.dialogs-messages_user{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    border-radius: 25px;
+}
+
+.dialogs-messages_guest{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    border-radius: 25px;
+}
+
+.dialogs-profile-mes{
+    margin: 0rem 1rem;
+}
+
+.dialogs-img{
+    height: 45px;
+    border-radius: 50%;  
+}
