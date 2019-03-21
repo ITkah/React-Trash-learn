@@ -26,6 +26,7 @@ const DialogMessage = (props) => {
 }
 
 
+
 let dialogsData = [
     {id: 1, name: 'Andrew'},
     {id: 2, name: 'Dima'},
@@ -34,34 +35,28 @@ let dialogsData = [
     {id: 5, name: 'Den'}
 ];
 
+let dialogsElemensts = [
+    <DialogUser name={dialogsData[0].name} id={dialogsData[0].id}/>,
+    <DialogUser name={dialogsData[1].name} id={dialogsData[1].id}/>,
+    <DialogUser name={dialogsData[2].name} id={dialogsData[2].id}/>,
+    <DialogUser name={dialogsData[3].name} id={dialogsData[3].id}/>,
+    <DialogUser name={dialogsData[4].name} id={dialogsData[4].id}/>
+];
 
 let MessagesData = [
     {id: 1, message: 'hello'},
     {id: 2, message: 'how are you ?'},
 ];
 
-
 const Dialogs = (props) => {
     return(
         <section className="dialogs">
             <div className="dialogs-user">
-                <DialogUser name={dialogsData[0].name} id={dialogsData[0].id}/>
-                <DialogUser name={dialogsData[1].name} id={dialogsData[1].id}/>
-                <DialogUser name={dialogsData[2].name} id={dialogsData[2].id}/>
-                <DialogUser name={dialogsData[3].name} id={dialogsData[3].id}/>
-                <DialogUser name={dialogsData[4].name} id={dialogsData[4].id}/>
+                { dialogsElemensts }
             </div>
             <div className="dialogs-messages">
                 <DialogMessage message={MessagesData[0].message} photo={Avatar}/>
                 <DialogMessage message={MessagesData[1].message} photo={Avatar}/>
-                {/* <div className="dialogs-messages_guest">
-                    <div className="dialogs-profile-mes">
-                        <p>love you</p>
-                    </div>
-                    <div className="dialogs-profile-img">
-                        <img src={Avatar} alt="profile-dialog" className="dialogs-img" />
-                    </div>
-                </div> */}
             </div>
         </section>
     );
