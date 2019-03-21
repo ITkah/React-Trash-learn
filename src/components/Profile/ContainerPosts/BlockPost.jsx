@@ -4,16 +4,8 @@ import UserPost from './Post/UserPost';
 
 const BlockPost = (props) => {
 
-    let postsData = [
-        {id: 1, post: 'Hi, how are you ?', likesCount: 10},
-        {id: 2, post: 'I okey !', likesCount: 12},
-        {id: 3, post: 'Hello Wourld', likesCount: 129},
-        {id: 4, post: 'Hello Planet', likesCount: 56},
-        {id: 5, post: 'i love Js', likesCount: 56}
-    ];
-
-    let postsElements = postsData
-        .map(Post => <UserPost message={Post.post} like={Post.likesCount} />);
+    let postsElements = 
+        props.posts.map(Post => <UserPost message={Post.post} like={Post.likesCount} />);
 
     return( 
         <div>

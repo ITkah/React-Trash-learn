@@ -1,7 +1,7 @@
 import React from 'react';
 import './Dialogs.css';
 import DialogItem from './DialogItem/DialogItem';
-import MessageItem from './Message/MessageItem';
+import MessageItem from './MessageItem/MessageItem';
 import Avatar from '../.././img/avatar.jpg';
 
 let dialogsData = [
