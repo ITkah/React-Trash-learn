@@ -1,0 +1,29 @@
+.dialogs{
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+}
+
+.dialogs-user{
+    width: 40%;
+    padding: 0.5rem;
+    border-right: 1px solid #3578E5;  
+}
+
+.dialogs-user_block{
+    margin-left: 10%;
+}
+
+.dialogs-user_block h3{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.dialogs-user_block h3:before{
+    content:"\2022";
+    margin-right: 0.75rem;
+}
+
+.active-link{
+    color:#777876;
+}
