@@ -7,7 +7,7 @@ const BlockPost = (props) => {
     let postsElements = 
         props.posts.map(Post => <UserPost message={Post.post} like={Post.likesCount} />);
 
-    return( 
+    return(
         <div>
             <div className="area-post">
                 <div className="area-post_text">

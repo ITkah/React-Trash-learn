@@ -8,16 +8,16 @@ import Footer from './components/Footer/Footer.jsx';
 import Dialogs from './components/Dialogs/Dialogs.jsx';
 import Music from './components/Music/Music.jsx';
 
-const App = (proprs) => {
+const App = (props) => {
     return (
       <BrowserRouter>
         <div className="wrapper" id="wrapper">
           <Header />
           <main className="main" id="main">
             <Nav />
-              <Route path='/profile' component={Profile} />
-              <Route path='/dialogs' component={Dialogs} />
-              <Route path='/music' component={Music} />
+              <Route path='/profile' render={ () => <Profile posts={props.posts}/> }/>
+              <Route path='/dialogs' render={ () => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}/> }/>
+              <Route path='/music'   render={ () => <Music/> }/>
           </main>
           <footer className="footer" id="footer">
             <Footer />
