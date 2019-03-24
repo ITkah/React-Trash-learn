@@ -5,11 +5,12 @@ import MessageItem from './MessageItem/MessageItem';
 import Avatar from '../.././img/avatar.jpg';
 
 const Dialogs = (props) => {
+    
     let dialogsElemensts = 
-    props.dialogsData.map(Dialog => <DialogItem name={Dialog.name} id={Dialog.id} /> );
+        props.state.dialogsData.map((Dialog,index) => <DialogItem  key={index} name={Dialog.name} id={Dialog.id} /> );
 
     let MessagesElements = 
-    props.messagesData.map(Message => <MessageItem message={Message.message} photo={Avatar} />);
+        props.state.messagesData.map((Message,index) => <MessageItem key={index} message={Message.message} photo={Avatar} />);
 
     return(
         <section className="dialogs">

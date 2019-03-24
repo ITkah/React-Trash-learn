@@ -3,9 +3,10 @@ import './BlockPost.css';
 import UserPost from './Post/UserPost';
 
 const BlockPost = (props) => {
+    debugger;
 
     let postsElements = 
-        props.posts.map(Post => <UserPost message={Post.post} like={Post.likesCount} />);
+        props.postsData.map((Post,index) => <UserPost key={index} message={Post.post} like={Post.likesCount} />);
 
     return(
         <div>
