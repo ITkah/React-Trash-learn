@@ -3,3 +3,12 @@
     width: 100%;
     display: flex;
 }
+
+.sendMessage {
+    display: flex;
+}
+
+textarea{
+    height: 25px;
+    width: 100%;
+}

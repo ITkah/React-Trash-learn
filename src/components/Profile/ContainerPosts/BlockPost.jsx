@@ -8,14 +8,21 @@ const BlockPost = (props) => {
     let postsElements = 
         props.postsData.map((Post,index) => <UserPost key={index} message={Post.post} like={Post.likesCount} />);
 
+    let newPostElement = React.createRef();
+
+    let hello = () => {
+        let text = newPostElement.current.value;
+        alert(text);
+    }
+
     return(
         <div>
             <div className="area-post">
                 <div className="area-post_text">
-                    <textarea></textarea>
+                    <textarea ref={newPostElement}></textarea>
                 </div>
                 <div className="area-post_button">
-                    <button>Add Post</button>
+                    <button onClick={hello}>Add Post</button>
                 </div>
             </div>
             <div className="post-container">
