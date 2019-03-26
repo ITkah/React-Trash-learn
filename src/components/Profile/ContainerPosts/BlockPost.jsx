@@ -3,16 +3,15 @@ import './BlockPost.css';
 import UserPost from './Post/UserPost';
 
 const BlockPost = (props) => {
-    debugger;
 
     let postsElements = 
         props.postsData.map((Post,index) => <UserPost key={index} message={Post.post} like={Post.likesCount} />);
 
     let newPostElement = React.createRef();
 
-    let hello = () => {
+    let addPost = () => {
         let text = newPostElement.current.value;
-        alert(text);
+        props.addPost(text);
     }
 
     return(
@@ -22,7 +21,7 @@ const BlockPost = (props) => {
                     <textarea ref={newPostElement}></textarea>
                 </div>
                 <div className="area-post_button">
-                    <button onClick={hello}>Add Post</button>
+                    <button onClick={addPost}>Add Post</button>
                 </div>
             </div>
             <div className="post-container">
