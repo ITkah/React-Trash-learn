@@ -1,3 +1,7 @@
 .area-post {
     margin-bottom: 1.8rem;
 }
+
+.area-post_text textarea{
+    width: 99%;
+}
