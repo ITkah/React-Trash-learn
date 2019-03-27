@@ -15,11 +15,15 @@ const BlockPost = (props) => {
         newPostElement.current.value = '';
     }
 
+    let onPostChange = () => {
+
+    }
+
     return(
         <div>
             <div className="area-post">
                 <div className="area-post_text">
-                    <textarea ref={newPostElement} />
+                    <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} />
                 </div>
                 <div className="area-post_button">
                     <button onClick={addPost}>Add Post</button>
