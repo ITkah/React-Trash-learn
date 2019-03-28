@@ -15,9 +15,17 @@ const App = (props) => {
           <Header />
           <main className="main" id="main">
             <Nav />
-              <Route path='/profile' render={ () => <Profile state={props.state.profilePage} addPost={props.addPost}/> }/>
-              <Route path='/dialogs' render={ () => <Dialogs state={props.state.messagesPage}/> }/>
-              <Route path='/music'   render={ () => <Music/> }/>
+              <Route path='/profile' render={ () => 
+              <Profile 
+                profilePage={props.state.profilePage} 
+                addPost={props.addPost}
+                updateNewPostText={props.updateNewPostText}/>
+              }/>
+              <Route path='/dialogs' render={ () => 
+              <Dialogs 
+                state={props.state.messagesPage}/> 
+              }/>
+              <Route path='/music' render={ () => <Music/> }/>
           </main>
           <footer className="footer" id="footer">
             <Footer />
