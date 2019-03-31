@@ -1,6 +1,7 @@
 import React from 'react';
 import './BlockPost.css';
 import UserPost from './Post/UserPost';
+import {addPostActionCreater, updateNewPostTextCreater} from '../../../redux/profile-reduser';
 
 const BlockPost = (props) => {
 
@@ -10,12 +11,13 @@ const BlockPost = (props) => {
     let newPostElement = React.createRef();
 
     let addPost = () => {
-        props.addPost();
+        props.dispatch(addPostActionCreater());
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.updateNewPostText(text);
+        let action = updateNewPostTextCreater(text);
+        props.dispatch(action);
     }
 
     return(

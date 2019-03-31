@@ -3,20 +3,27 @@ import './Dialogs.css';
 import DialogItem from './DialogItem/DialogItem';
 import MessageItem from './MessageItem/MessageItem';
 import Avatar from '../.././img/avatar.jpg';
+import {updateNewMessageBodyCreator, sendMessageCreator} from '../../redux/dialogs-reduser';
 
 const Dialogs = (props) => {
     
+    let state = props.store.getState().messagesPage;
+
     let dialogsElemensts = 
-        props.state.dialogsData.map((Dialog,index) => <DialogItem  key={index} name={Dialog.name} id={Dialog.id} /> );
+        state.dialogsData.map((Dialog,index) => <DialogItem  key={index} name={Dialog.name} id={Dialog.id} /> );
 
     let MessagesElements = 
-        props.state.messagesData.map((Message,index) => <MessageItem key={index} message={Message.message} photo={Avatar} />);
+        state.messagesData.map((Message,index) => <MessageItem key={index} message={Message.message} photo={Avatar} />);
 
-    let newMessageSend = React.createRef();
+    let newMessageBody = state.newMessageBody;
 
-    let message = () => {
-        let mess = newMessageSend.current.value;
-        alert(mess);
+    let onNewMessageChange = (e) => {
+        let body = e.target.value;
+        props.store.dispatch(updateNewMessageBodyCreator(body));
+    }
+
+    let sendMessageClick = () => {
+        props.store.dispatch(sendMessageCreator());
     }
 
     return(
@@ -27,8 +34,8 @@ const Dialogs = (props) => {
             <div className="dialogs-messages">
                 { MessagesElements }
                 <div className="sendMessage">
-                    <textarea ref={newMessageSend}></textarea>
-                    <button onClick={message}>Send</button>
+                    <textarea onChange={onNewMessageChange} value={newMessageBody}></textarea>
+                    <button onClick={sendMessageClick}>Send</button>
                 </div>
             </div>
         </section>
